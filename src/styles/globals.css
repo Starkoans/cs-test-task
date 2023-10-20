@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --foreground-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+.chart {
+  @apply bg-[#FF00F50D] w-[995px] h-[400px] rounded-[27px] grid grid-flow-col gap-[35px] p-[40px];
+}
+.chart .ordinate {
+  @apply grid grid-cols-1 gap-[20px] w-[61px] h-[280px];
+}
+.chart .abscissa {
+  @apply grid grid-flow-col grid-rows-1 auto-cols-auto h-[310px] w-[820px] auto-cols-auto;
+}
+.chart .abscissa .bar-container {
+  @apply self-end flex flex-col items-center;
+}
+.chart .abscissa .bar {
+  @apply bg-[#000AFF] w-[16px] rounded-md hover:drop-shadow-lg;
+}
+.chart .abscissa .bar .bar-value {
+  display: none;
+}
+.chart .abscissa .bar:hover .bar-value {
+  @apply bg-[#65FF8E] justify-center;
+  display: flex;
+  position: relative;
+  width: fit-content;
+  top: -30px;
+  right: 100%;
+  padding-inline: 8px;
+  height: 24px;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=globals.css.map */
